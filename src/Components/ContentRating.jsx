@@ -1,4 +1,10 @@
 
+/*--------------------------
+*FUNCION FLECHA CON RETORNO IMPLICITO*
+handleLike: () => {
+    this.setState((prevState) => ({ CLAVE: VALORnew, }));
+},
+--------------------------*/
 import React, { Component } from 'react';
 import './ContentRating.css';
 
@@ -10,13 +16,13 @@ class ContentRating extends Component {
             dislikes: 0,
             totalRatings: 0,
             handleLike: () => {
-                this.setState((prevState) => ({ likes: prevState.likes + 1 }));
-                this.setState((prevState) => ({totalRatings: prevState.totalRatings + 1}));
+                this.setState((prevState) => ({ likes: prevState.likes + 1,
+                    totalRatings: prevState.totalRatings + 1}));
             },
 
             handleDislike: () => {
-                this.setState((prevState) => ({ dislikes: prevState.dislikes + 1 }));
-                this.setState((prevState) => ({totalRatings: prevState.totalRatings + 1}));
+                this.setState((prevState) => ({ dislikes: prevState.dislikes + 1,
+                    totalRatings: prevState.totalRatings + 1}));
             },
         }
     }

@@ -8,12 +8,12 @@ class ContentRating extends Component {
         this.state = {
             likes: 0,
             dislikes: 0,
-            handleLike:() => {
-                this.setState((prevState) => ({likes: prevState.likes + 1}));
+            handleLike: () => {
+                this.setState((prevState) => ({ likes: prevState.likes + 1 }));
             },
 
-            handleDislike:() => {
-                this.setState((prevState) => ({dislikes: prevState.dislikes + 1}));
+            handleDislike: () => {
+                this.setState((prevState) => ({ dislikes: prevState.dislikes + 1 }));
             },
         }
     }
@@ -24,10 +24,10 @@ class ContentRating extends Component {
                     <p>
                         “Los buenos tiempos se convierten en buenos recuerdos, pero los malos tiempos se convierten en buenas lecciones.”
                     </p>
-                </div>
-                <div className='rating-buttons'>
-                    <button className='like-button' onClick={this.state.handleLike}>Like ({this.state.likes})</button>
-                    <button className='dislike-button' onClick={this.state.handleDislike}>Dislike ({this.state.dislikes})</button>
+                    <div className='rating-buttons'>
+                        <button className='like-button' onClick={this.state.handleLike}>Like ({this.state.likes})</button>
+                        <button className='dislike-button' onClick={this.state.handleDislike}>Dislike ({this.state.dislikes})</button>
+                    </div>
                 </div>
             </>
         );
